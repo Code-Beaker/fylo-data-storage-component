@@ -14,8 +14,52 @@
   </head>
   <body>
     <main>
-      <div class="container">
-        <div class="container__item info-section"></div>
+      <picture>
+        <source
+          media="(min-width: 50rem)"
+          srcset="assets/images/bg-desktop.png"
+        />
+        <img class="body-bg" src="assets/images/bg-mobile.png" alt="" />
+      </picture>
+      <div class="body-wrapper">
+        <div class="container">
+          <div class="container__item info-section">
+            <div class="container__image-wrapper">
+              <img
+                class="container__logo"
+                src="assets/images/logo.svg"
+                alt=""
+              />
+            </div>
+            <div class="container__icons-wrapper">
+              <div class="container__icon">
+                <img src="assets/images/icon-document.svg" alt="" />
+              </div>
+              <div class="container__icon">
+                <img src="assets/images/icon-folder.svg" alt="" />
+              </div>
+              <div class="container__icon">
+                <img src="assets/images/icon-upload.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!-- data section -->
+          <div class="container__item data-section">
+            <p class="container__text">
+              You've used <span class="text-bold">815 GB</span> of your storage
+            </p>
+            <div class="storage-indicator"></div>
+            <div class="storage-values">
+              <span class="storage-value">0GB</span>
+              <span class="storage-value">1000GB</span>
+            </div>
+            <div class="avail-storage-data-wrapper">
+              <p class="avail-data">
+                <span class="text-lg text-bold">185</span>gb Left
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <script src="app.js"></script>
