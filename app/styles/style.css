@@ -2,8 +2,9 @@
 @import "./variables.css";
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: var(--font-main), system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 main {
@@ -97,7 +98,7 @@ main {
 }
 
 .text-bold {
-  font-weight: bold;
+  font-weight: var(--fw-bold);
 }
 
 .storage-indicator::before {
@@ -148,4 +149,52 @@ main {
 .text-lg {
   color: var(--neutral-very-dark-blue);
   font-size: 1.75rem;
+}
+
+@media screen and (width > 50rem) {
+  .container {
+    grid-template-columns: auto 1fr;
+    align-items: end;
+  }
+
+  .info-section {
+    height: 12.5rem;
+  }
+
+  .data-section {
+    max-width: 50rem;
+    height: 10rem;
+  }
+
+  .container__text {
+    font-size: 1.25rem;
+  }
+
+  .storage-value {
+    font-size: 1.25rem;
+  }
+
+  .avail-storage-data-wrapper {
+    top: -50%;
+    margin: 1rem;
+    padding-inline: 2rem;
+    min-width: fit-content;
+    left: 75%;
+    right: -50%;
+    height: 5rem;
+  }
+
+  .avail-storage-data-wrapper::after {
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 3rem;
+    height: 3rem;
+    background-color: white;
+    border-radius: 0.125rem;
+    position: absolute;
+    bottom: -20%;
+    left: -0.5px;
+    clip-path: polygon(0 100%, 0 0, 100% 0);
+  }
 }
